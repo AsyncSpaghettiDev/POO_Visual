@@ -9,4 +9,4 @@ Paso de practicas a Visual
 [Practica #9](./Alumnos/Form1.cs) Herencia de Alumnos a Licenciatura y posgrado  
 [Descargar](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/JonathanMov/POO_Visual/blob/master/Alumnos/bin/Debug/Alumnos.exe)  
 [Practica #10](./Musicos/Form1.cs) Herencia de musicos  
-[Descargar]()  
+[Descargar](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/JonathanMov/POO_Visual/blob/master/Musicos/bin/Debug/Musicos.exe)  
