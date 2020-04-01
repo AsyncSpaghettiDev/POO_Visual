@@ -1,0 +1,9 @@
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Peliculas\bin\Debug\Peliculas.exe
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Peliculas\bin\Debug\Peliculas.pdb
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Peliculas\obj\Debug\Peliculas.csprojAssemblyReference.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Peliculas\obj\Debug\Peliculas.Form1.resources
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Peliculas\obj\Debug\Peliculas.Properties.Resources.resources
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Peliculas\obj\Debug\Peliculas.csproj.GenerateResource.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Peliculas\obj\Debug\Peliculas.csproj.CoreCompileInputs.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Peliculas\obj\Debug\Peliculas.exe
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Peliculas\obj\Debug\Peliculas.pdb
