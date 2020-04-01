@@ -1,0 +1,9 @@
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Duracion_Visual\bin\Debug\Duracion_Visual.exe
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Duracion_Visual\bin\Debug\Duracion_Visual.pdb
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Duracion_Visual\obj\Debug\Duracion_Visual.csprojAssemblyReference.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Duracion_Visual\obj\Debug\Duracion_Visual.Form1.resources
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Duracion_Visual\obj\Debug\Duracion_Visual.Properties.Resources.resources
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Duracion_Visual\obj\Debug\Duracion_Visual.csproj.GenerateResource.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Duracion_Visual\obj\Debug\Duracion_Visual.csproj.CoreCompileInputs.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Duracion_Visual\obj\Debug\Duracion_Visual.exe
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Duracion_Visual\obj\Debug\Duracion_Visual.pdb
