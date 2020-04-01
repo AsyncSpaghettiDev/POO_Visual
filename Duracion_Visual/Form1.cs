@@ -12,10 +12,32 @@ namespace Duracion_Visual{
             InitializeComponent();
         }
         private void button1_Click(object sender, EventArgs e){
-            Duracion a = new Duracion(Int32.Parse(textBox1.Text), Int32.Parse(textBox2.Text), Int32.Parse(textBox3.Text));
-            Duracion b = new Duracion(Int32.Parse(textBox4.Text), Int32.Parse(textBox5.Text), Int32.Parse(textBox6.Text));
-            Duracion c = a + b;
-            label1.Text = c.ToString();
+            try{
+               Duracion a = new Duracion(Int32.Parse(textBox1.Text), Int32.Parse(textBox2.Text), Int32.Parse(textBox3.Text));
+               Duracion b = new Duracion(Int32.Parse(textBox4.Text), Int32.Parse(textBox5.Text), Int32.Parse(textBox6.Text));
+               Duracion c = a + b;
+               label1.Text = c.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Debes rellenar todos los campos.","Error");
+            }
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e){
+            Application.Exit();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
+            textBox6.Clear();
+            label1.Text = "";
         }
     }
     class Duracion{
