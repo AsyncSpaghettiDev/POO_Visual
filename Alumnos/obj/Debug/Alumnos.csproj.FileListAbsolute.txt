@@ -1,0 +1,9 @@
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Alumnos\bin\Debug\Alumnos.exe
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Alumnos\bin\Debug\Alumnos.pdb
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Alumnos\obj\Debug\Alumnos.csprojAssemblyReference.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Alumnos\obj\Debug\Alumnos.Form1.resources
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Alumnos\obj\Debug\Alumnos.Properties.Resources.resources
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Alumnos\obj\Debug\Alumnos.csproj.GenerateResource.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Alumnos\obj\Debug\Alumnos.csproj.CoreCompileInputs.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Alumnos\obj\Debug\Alumnos.exe
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Alumnos\obj\Debug\Alumnos.pdb
