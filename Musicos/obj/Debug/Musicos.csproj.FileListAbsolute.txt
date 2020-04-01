@@ -1,0 +1,9 @@
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Musicos\bin\Debug\Musicos.exe
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Musicos\bin\Debug\Musicos.pdb
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Musicos\obj\Debug\Musicos.csprojAssemblyReference.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Musicos\obj\Debug\Musicos.Form1.resources
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Musicos\obj\Debug\Musicos.Properties.Resources.resources
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Musicos\obj\Debug\Musicos.csproj.GenerateResource.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Musicos\obj\Debug\Musicos.csproj.CoreCompileInputs.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Musicos\obj\Debug\Musicos.exe
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Musicos\obj\Debug\Musicos.pdb
