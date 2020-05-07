@@ -8,3 +8,13 @@ C:\Users\Jonathan Mojica\Desktop\Figuras\obj\Debug\Figuras.csproj.GenerateResour
 C:\Users\Jonathan Mojica\Desktop\Figuras\obj\Debug\Figuras.csproj.CoreCompileInputs.cache
 C:\Users\Jonathan Mojica\Desktop\Figuras\obj\Debug\Figuras.exe
 C:\Users\Jonathan Mojica\Desktop\Figuras\obj\Debug\Figuras.pdb
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Figuras\bin\Debug\Figuras.exe.config
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Figuras\bin\Debug\Figuras.exe
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Figuras\bin\Debug\Figuras.pdb
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Figuras\obj\Debug\Figuras.csprojAssemblyReference.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Figuras\obj\Debug\Figuras.Form1.resources
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Figuras\obj\Debug\Figuras.Properties.Resources.resources
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Figuras\obj\Debug\Figuras.csproj.GenerateResource.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Figuras\obj\Debug\Figuras.csproj.CoreCompileInputs.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Figuras\obj\Debug\Figuras.exe
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Figuras\obj\Debug\Figuras.pdb
