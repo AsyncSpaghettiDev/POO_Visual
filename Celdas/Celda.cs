@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace Celdas {
     /// <summary>
-    /// Declara el objeto que se esta usando actualmente
+    /// Declara el objeto que se esta mostrando actualmente
     /// </summary>
     public enum Type { 
         empty, 
