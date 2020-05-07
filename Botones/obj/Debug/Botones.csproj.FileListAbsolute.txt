@@ -8,3 +8,13 @@ C:\Users\Jonathan Mojica\Desktop\Botones\obj\Debug\Botones.csproj.CoreCompileInp
 C:\Users\Jonathan Mojica\Desktop\Botones\obj\Debug\Botones.exe
 C:\Users\Jonathan Mojica\Desktop\Botones\obj\Debug\Botones.pdb
 C:\Users\Jonathan Mojica\Desktop\Botones\obj\Debug\Botones.Form1.resources
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\bin\Debug\Botones.exe.config
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\bin\Debug\Botones.exe
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\bin\Debug\Botones.pdb
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\obj\Debug\Botones.csprojAssemblyReference.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\obj\Debug\Botones.Properties.Resources.resources
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\obj\Debug\Botones.csproj.GenerateResource.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\obj\Debug\Botones.csproj.CoreCompileInputs.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\obj\Debug\Botones.exe
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\obj\Debug\Botones.pdb
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\obj\Debug\Botones.Juego.resources
