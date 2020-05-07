@@ -73,6 +73,10 @@ namespace Celdas {
         public void getProxima(int x,int y) {
 
         }
+        /// <summary>
+        /// Generacion de un tipo de objeto que estará en la celda basada en una probabilidad
+        /// </summary>
+        /// <returns>Un tipo de Objeto que estará dibujado en una celda</returns>
         private Type Aleatorio() {
             Random rdm= new Random();
             double prob=rdm.NextDouble();
