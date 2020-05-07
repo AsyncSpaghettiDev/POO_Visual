@@ -60,5 +60,14 @@ namespace Celdas {
                 MessageBox.Show(e.Message+e.TargetSite);
             }
         }
+        /// <summary>
+        /// Determina si la celda actual contiene el punto dado.
+        /// </summary>
+        /// <param name="x">Ingresa la coordenada x del punto a determinar</param>
+        /// <param name="y">Ingresa la coordenada y del punto a determinar</param>
+        /// <returns></returns>
+        public bool Ìncluye(int x,int y) {
+            return this.x < x && this.x + this.size > x && this.y < y && this.y + this.size > y;
+        }
     }
 }

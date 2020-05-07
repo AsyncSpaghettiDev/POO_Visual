@@ -1,0 +1,9 @@
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Celdas\bin\Release\Celdas.exe.config
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Celdas\bin\Release\Celdas.exe
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Celdas\bin\Release\Celdas.pdb
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Celdas\obj\Release\Celdas.csprojAssemblyReference.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Celdas\obj\Release\Celdas.Properties.Resources.resources
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Celdas\obj\Release\Celdas.csproj.GenerateResource.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Celdas\obj\Release\Celdas.csproj.CoreCompileInputs.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Celdas\obj\Release\Celdas.exe
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Celdas\obj\Release\Celdas.pdb

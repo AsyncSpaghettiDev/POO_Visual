@@ -6,7 +6,7 @@ using System.Drawing;
 /// <summary>
     /// Configuraciones genericas.
     /// </summary>
-public class Funciones {
+public class Funciones:Form {
     /// <summary>
         /// <para> Establece el tamaño de la ventana, y su icono
         /// Ademas de dejar la ventana estática para evitar su redimension. </para>
@@ -25,6 +25,7 @@ public class Funciones {
         Lienzo.MaximizeBox = false;
         Lienzo.MinimizeBox = false;
 
+        Lienzo.StartPosition = FormStartPosition.CenterScreen;
         Lienzo.FormClosed += new FormClosedEventHandler(Cerrar);
     }
     private static void Cerrar(object sender, EventArgs e) => Application.Exit();
