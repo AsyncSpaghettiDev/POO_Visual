@@ -25,7 +25,7 @@ public class Funciones {
         Lienzo.MaximizeBox = false;
         Lienzo.MinimizeBox = false;
 
-        Lienzo.FormClosed += new FormClosedEventHandler(cerrar);
+        Lienzo.FormClosed += new FormClosedEventHandler(Cerrar);
     }
-    private static void cerrar(object sender, EventArgs e) => Application.Exit();
+    private static void Cerrar(object sender, EventArgs e) => Application.Exit();
 }
