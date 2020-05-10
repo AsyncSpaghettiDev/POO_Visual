@@ -6,7 +6,7 @@ using System.Drawing;
 namespace Botones {
     class Inicio :Form{
         private List<Button> cambios;
-        private String[] dif=new String[]{
+        private readonly String[] dif=new String[]{
             "Fácil",
             "Medio",
             "Dificil"
@@ -20,14 +20,13 @@ namespace Botones {
             this.cambios = new List<Button>();
 
             for(int i = 0; i < 3; i++) {
-                cambios.Add(new Button());
-                cambios[i].Text = dif[i];
+                this.cambios.Add(new Button());
+                this.cambios[i].Text = this.dif[i];
                 if (i == 0)
-                    cambios[0].Location = new Point(30, 50);
+                    this.cambios[0].Location = new Point(30, 50);
                 else
-                    cambios[i].Location = new Point(cambios[i-1].Location.X+120, 50);
-
-                this.Controls.Add(cambios[i]);
+                    this.cambios[i].Location = new Point(this.cambios[i-1].Location.X+120, 50);
+                this.Controls.Add(this.cambios[i]);
                 this.cambios[i].Click+= new EventHandler(cambiar);
             }
         }

@@ -8,7 +8,7 @@ namespace Botones {
         private readonly int dif;
         private readonly int tamano;
         public Tablero(int tamano,int dif) {
-            cuadricula = new List<Celda>();
+            this.cuadricula = new List<Celda>();
 
             this.tamano = tamano;
             this.dif = dif;
@@ -20,15 +20,15 @@ namespace Botones {
         private void crea_cuadricula(int altura) {
             for(int i = 0; i < altura / 10; i++) 
                 for (int j = 0; j < 10; j++)
-                    cuadricula.Add(new Celda(10,i,j));
+                    this.cuadricula.Add(new Celda(10,i,j));
         }
         public void dibujarTablero(Form Lienzo) {
-            foreach (var boton in cuadricula)
+            foreach (var boton in this.cuadricula)
                     boton.dibujar(Lienzo);
         }
         private void marcar() {
-            foreach(var boton in cuadricula)
-                foreach(Celda estado in cuadricula) 
+            foreach(var boton in this.cuadricula)
+                foreach(Celda estado in this.cuadricula) 
                     boton.contar(estado);
         }
         private void aleatorio(List<Celda> tablero) {

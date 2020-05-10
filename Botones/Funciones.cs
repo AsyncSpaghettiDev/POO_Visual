@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Drawing;
 
 /// <summary>
     /// Configuraciones genericas.
     /// </summary>
-public class Funciones:Form {
+public class Funciones {
     /// <summary>
         /// <para> Establece el tamaño de la ventana, y su icono
         /// Ademas de dejar la ventana estática para evitar su redimension. </para>
