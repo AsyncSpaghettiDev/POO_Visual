@@ -18,3 +18,4 @@ C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\obj\Debug\Botones.csproj.Cor
 C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\obj\Debug\Botones.exe
 C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\obj\Debug\Botones.pdb
 C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\obj\Debug\Botones.Juego.resources
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\obj\Debug\Botones.recursos.resources

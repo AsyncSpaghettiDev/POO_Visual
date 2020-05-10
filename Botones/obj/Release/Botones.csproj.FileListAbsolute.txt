@@ -1,0 +1,11 @@
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\bin\Release\Botones.exe.config
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\bin\Release\Botones.exe
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\bin\Release\Botones.pdb
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\obj\Release\Botones.Juego.resources
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\obj\Release\Botones.Properties.Resources.resources
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\obj\Release\Botones.csproj.GenerateResource.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\obj\Release\Botones.csproj.CoreCompileInputs.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\obj\Release\Botones.exe
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\obj\Release\Botones.pdb
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\obj\Release\Botones.csprojAssemblyReference.cache
+C:\Users\Jonathan Mojica\Desktop\POO_Visual\Botones\obj\Release\Botones.recursos.resources

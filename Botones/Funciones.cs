@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Windows.Forms;
 using System.Drawing;
 
@@ -14,10 +15,11 @@ public class Funciones {
         /// <param name="x">Ingresa la dimension X deseada de la ventana </param>
         /// <param name="y">Ingresa la dimension Y deseada de la ventana </param>
         /// <param name="Titulo">Ingresa el nombre deseado de la ventana</param>
-        /// <param name="nombre">Ingresa el nombre del icono de la ventana, nota: poner en bin/Debug/</param>
+        /// <param name="nombre">Ingresa el nombre del icono de la ventana, nota: crear un carpeta img en el folder principal</param>
     public static void Diseno(Form Lienzo,int x,int y,String Titulo,String nombre) {
         Lienzo.Size = new Size(x, y);
-        Lienzo.Icon = new Icon("./"+nombre);
+        ComponentResourceManager imgs = new ComponentResourceManager(typeof(Botones.recursos));
+        Lienzo.Icon = imgs.GetObject(nombre) as Icon;
         Lienzo.Text = Titulo;
 
         Lienzo.FormBorderStyle = FormBorderStyle.Fixed3D;
@@ -27,5 +29,5 @@ public class Funciones {
         Lienzo.StartPosition = FormStartPosition.CenterScreen;
         Lienzo.FormClosed += new FormClosedEventHandler(Cerrar);
     }
-    private static void Cerrar(object sender, EventArgs e) => Application.Exit();
+    public static void Cerrar(object sender, EventArgs e) => Application.Exit();
 }
