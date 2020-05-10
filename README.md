@@ -10,3 +10,9 @@ Paso de practicas a Visual
 [Descargar](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/JonathanMov/POO_Visual/blob/master/Alumnos/bin/Debug/Alumnos.exe)  
 [Practica #10](./Musicos/Form1.cs) Herencia de musicos  
 [Descargar](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/JonathanMov/POO_Visual/blob/master/Musicos/bin/Debug/Musicos.exe)  
+[Practica](./Botones/README.md) Buscaminas c#  
+[Descargar](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/JonathanMov/POO_Visual/blob/master/Botones/bin/Debug/Botones.exe)  
+[Practica](./Figuras/README.md) Paint en c#  
+[Descargar](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/JonathanMov/POO_Visual/blob/master/Figuras/bin/Debug/Figuras.exe)  
+[Practica](./Celdas/README.md) Triple Town en c#  
+[Descargar](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/JonathanMov/POO_Visual/blob/master/Celda/bin/Debug/Celda.exe)

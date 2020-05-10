@@ -9,7 +9,6 @@ namespace Botones{
         private Tablero tablero_juego;
         private readonly int dif,tamano;
         public Juego(int dif) {
-
             String Text=null;
             int disminuir=0;
             this.dif = dif;
@@ -31,8 +30,7 @@ namespace Botones{
             }
             InitializeComponents();
             Funciones.Diseno(this, 440, 440-disminuir, Text, "logo.ico");
-            //this.MouseEnter += new EventHandler(comprueba);
-            this.LostFocus += new EventHandler(comprueba);
+            LostFocus += new EventHandler(comprueba);
             this.ctr1.Click += new EventHandler(carga_tablero);
         }
         private void InitializeComponents() {
