@@ -15,40 +15,51 @@ namespace Celdas {
         house 
     }
     /// <summary>
+    /// Clase generica con datos básicos como el objeto que estará dibujado y el tamaño del mismo.
+    /// </summary>
+    abstract class Espacio {
+        public Espacio(Type estado) {
+            this.estado = estado;
+        }
+        protected Type estado;
+        protected readonly int size=50;
+        protected int x,y;
+        protected List<Bitmap> _objeto;
+        protected void actualiza(List<Bitmap> bitmaps) {
+            bitmaps.Add(new Bitmap("../../img/path.bmp"));
+            bitmaps.Add(new Bitmap("../../img/Grass.png"));
+            bitmaps.Add(new Bitmap("../../img/Bush.png"));
+            bitmaps.Add(new Bitmap("../../img/Tree.png"));
+            bitmaps.Add(new Bitmap("../../img/House.png"));
+        }
+        public abstract void Dibuja(Form Lienzo);
+    }
+    /// <summary>
     /// Celda donde se incluye que objeto tendrá
     /// </summary>
-    class Celda {
-        readonly Type estado;
-        readonly int size=50;
+    class Celda:Espacio {
         readonly int row,column;
-        readonly int x,y;
-        readonly List<Bitmap> _objeto = new List<Bitmap>();
         /// <summary>
         /// Creación de una celda donde se declara que objeto tendrá
         /// </summary>
         /// <param name="row">Establece en que fila se encontrará</param>
         /// <param name="column">Establece en que columna se encontrará</param>
         /// <param name="estado">Declara que objeto está dibujado en la celda</param>
-        public Celda(int row,int column, Type estado) {
-            
-            this.estado = estado;
+        public Celda(int row,int column, Type estado):base(estado) {
+            this._objeto = new List<Bitmap>();
             this.row = row;
             this.column = column;
             /*Se determina la posicion donde se dibujará multiplicando la fila y columna
              por el tamaño de esta*/
             this.x = row * this.size;
             this.y = column * this.size;
-            this._objeto.Add(new Bitmap("../../img/path.bmp"));
-            this._objeto.Add(new Bitmap("../../img/Grass.png"));
-            this._objeto.Add(new Bitmap("../../img/Bush.png"));
-            this._objeto.Add(new Bitmap("../../img/Tree.png"));
-            this._objeto.Add(new Bitmap("../../img/House.png"));
+            actualiza(this._objeto);
         }
         /// <summary>
         /// Dibuja la celda actual en la ventana deseada
         /// </summary>
         /// <param name="Lienzo">Pasa la form actual, se recomienda usar this</param>
-        public void Dibuja(Form Lienzo) {
+        public override void Dibuja(Form Lienzo) {
             Graphics imagen = Lienzo.CreateGraphics();
             try {
                 /*Si la celda acual tiene un objeto se le dibuja un fondo*/
@@ -68,6 +79,30 @@ namespace Celdas {
         /// <returns></returns>
         public bool Ìncluye(int x,int y) {
             return this.x < x && this.x + this.size > x && this.y < y && this.y + this.size > y;
+        }
+    }
+    class Cambio:Espacio {
+        Label obj_cambio;
+        public Cambio(int x,int y,Type estado) : base(estado) {
+            this.obj_cambio = new Label();
+            this.obj_cambio.Location = new Point(this.x-50,this.y);
+            this.obj_cambio.Text = "Objeto a colocar";
+            this.x = x;
+            this.y = y;
+        }
+        /// <summary>
+        /// Dibuja la celda actual en la ventana deseada
+        /// </summary>
+        /// <param name="Lienzo">Pasa la form actual, se recomienda usar this</param>
+        public override void Dibuja(Form Lienzo) {
+            Graphics imagen = Lienzo.CreateGraphics();
+            try {
+                imagen.DrawImage(new Bitmap("../../img/bg.bmp"), this.x, this.y,this.size, this.size);
+                imagen.DrawImage(this._objeto[(int)this.estado], this.x, this.y,this.size, this.size);
+            }
+            catch (Exception e) {
+                MessageBox.Show(e.Message + e.TargetSite);
+            }
         }
     }
 }

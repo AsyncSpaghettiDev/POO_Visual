@@ -15,10 +15,8 @@ namespace Botones {
             InitializeComponents();
         }
         public void InitializeComponents() {
-            Funciones.Diseno(this, 400, 150, "menu.ico");
-            CenterToScreen();
+            Funciones.Diseno(this, 400, 150,"Elige Dificultad", "menu.ico");
 
-            this.Text = "Elige Dificultad";
             this.cambios = new List<Button>();
 
             for(int i = 0; i < 3; i++) {
@@ -42,7 +40,7 @@ namespace Botones {
                 case "Dificil":new Juego(15).Show();
                     break;
             }
-            this.Hide();
+            Hide();
         }
         
     }

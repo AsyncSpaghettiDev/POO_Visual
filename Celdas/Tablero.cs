@@ -23,7 +23,7 @@ namespace Celdas {
         Celda seleccionada;
         public Tablero() {
             this.cuadricula = new List<List<Celda>>();
-            Inicia_cuadricula(8,8);
+            
             this.condicion_actual = Condicion.agregando;
         }
         /// <summary>
@@ -35,9 +35,8 @@ namespace Celdas {
             try {
                 for(int i = 0; i < fila; i++) {
                     List<Celda> filas= new List<Celda>();
-                    for(int j = 0; j < columnas; j++) {
+                    for(int j = 0; j < columnas; j++) 
                         filas.Add(new Celda(i,j,Aleatorio()));
-                    }
                     this.cuadricula.Add(filas);
                 }
             }
@@ -56,19 +55,17 @@ namespace Celdas {
         /// </summary>
         /// <param name="lienzo">Pasa la form actual, se recomienda usar this</param>
         public void Pintar_tablero(Form lienzo) {
+            Inicia_cuadricula(8, 8);
             foreach (var fila in this.cuadricula) {
-                foreach(Celda espacio in fila){
+                foreach(Celda espacio in fila)
                     espacio.Dibuja(lienzo);
-                }
             }
         }
         public void getSeleccionada(int x,int y) {
             foreach(var fila in this.cuadricula)
-                foreach(Celda posible in fila) {
-                    if (posible.Ìncluye(x, y)) {
+                foreach(Celda posible in fila) 
+                    if (posible.Ìncluye(x, y)) 
                         this.seleccionada = posible as Celda;
-                    }
-                }
         }
         public void getProxima(int x,int y) {
 
