@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.ComponentModel;
 using System.Windows.Forms;
+using System.Drawing.Text;
 
 namespace Botones {
     /// <summary>
@@ -21,19 +22,33 @@ namespace Botones {
                     this.rodeada--;
             }
         }
+        private bool _habilitado;
+        public bool habilitado {
+            get => _habilitado;
+            set {
+                this._habilitado = value;
+                this.Enabled = value;
+                if (this.rodeada != 0)
+                    this.Enabled = true;
+            }
+        }
+        private List<Celda> cardinal;
+        private List<Celda> esquinas;
         private readonly List<Celda> vecinos;
         /// <summary>
         /// Creacion de la celda
         /// </summary>
         /// <param name="cant">Cantidad deseada de botones por renglon</param>
         public Celda(int fila,int columna) {
-            this.Enabled = true;
+            this.habilitado = true;
+            this.cardinal = new List<Celda>();
+            this.esquinas = new List<Celda>();
             this.vecinos = new List<Celda>();
             this.lado=35;
             this.y = fila* lado+60;
             this.x = (columna+1)* lado;
             this.Size = new Size(lado,lado);
-            MouseClick += new MouseEventHandler(descubre);
+            MouseDown += new MouseEventHandler(descubre);
             TabStop = false;
             this.ForeColor = Color.White;
         }
@@ -48,29 +63,29 @@ namespace Botones {
             if (!this.estado) {
                 int centro_x=this.x+(lado/2);
                 int centro_y=this.y+(lado/2);
-                //Derecha
-                if (sig.incluye(centro_x + lado, centro_y, this.vecinos) && sig.estado)
-                    this.rodeada++;
-                //Izquierda
-                if (sig.incluye(centro_x - lado, centro_y, this.vecinos) && sig.estado)
-                    this.rodeada++;
-                //Abajo
-                if (sig.incluye(centro_x, centro_y + lado, this.vecinos) && sig.estado)
-                    this.rodeada++;
                 //Arriba
-                if (sig.incluye(centro_x, centro_y - lado, this.vecinos) && sig.estado)
+                if (sig.lados(centro_x, centro_y - lado, this) && sig.estado)
                     this.rodeada++;
                 //Derecha arriba
-                if (sig.incluye(centro_x + lado, centro_y + lado, this.vecinos) && sig.estado)
+                if (sig.esquina(centro_x + lado, centro_y + lado, this) && sig.estado)
+                    this.rodeada++;
+                //Derecha
+                if (sig.lados(centro_x + lado, centro_y, this) && sig.estado)
                     this.rodeada++;
                 //Derecha abajo
-                if (sig.incluye(centro_x + lado, centro_y - lado, this.vecinos) && sig.estado)
+                if (sig.esquina(centro_x + lado, centro_y - lado, this) && sig.estado)
                     this.rodeada++;
-                //Izquierda arriba
-                if (sig.incluye(centro_x - lado, centro_y + lado, this.vecinos) && sig.estado)
+                //Abajo
+                if (sig.lados(centro_x, centro_y + lado, this) && sig.estado)
                     this.rodeada++;
                 //Izquierda abajo
-                if (sig.incluye(centro_x - lado, centro_y - lado, this.vecinos) && sig.estado)
+                if (sig.esquina(centro_x - lado, centro_y - lado, this) && sig.estado)
+                    this.rodeada++;
+                //Izquierda
+                if (sig.lados(centro_x - lado, centro_y, this) && sig.estado)
+                    this.rodeada++;
+                //Izquierda arriba
+                if (sig.esquina(centro_x - lado, centro_y + lado, this) && sig.estado)
                     this.rodeada++;
             }
         }
@@ -80,9 +95,19 @@ namespace Botones {
         /// <param name="x">Coordenada x del punto a evaluar</param>
         /// <param name="y">Coordenada y del punto a evaluar</param>
         /// <returns></returns>
-        private bool incluye(int x,int y,List<Celda> vec) {
+        private bool esquina(int x,int y,Celda cell) {
             if (x > this.x && x < this.x + lado && y > this.y && y < this.y + lado) {
-                vec.Add(this);
+                cell.esquinas.Add(this);
+                cell.vecinos.Add(this);
+                return true;
+            }
+            else
+                return false;
+        }
+        private bool lados(int x, int y, Celda cell) {
+            if (x > this.x && x < this.x + lado && y > this.y && y < this.y + lado) {
+                cell.cardinal.Add(this);
+                cell.vecinos.Add(this);
                 return true;
             }
             else
@@ -101,13 +126,16 @@ namespace Botones {
         /// </summary>
         /// <param name="objetivo">Celda a evaluar</param>
         private void actualiza(Celda objetivo) {
-            foreach (Celda campo in objetivo.vecinos) {
-                if (campo.rodeada == 0)
-                    campo.Enabled = false;
-                if (campo.rodeada != 0) {
-                    if (campo.rodeada > 0)
-                        cerca(campo);
-                    break;
+            int i=0;
+            foreach (Celda campo in objetivo.cardinal) {
+                if (campo.rodeada > 0 && campo.habilitado) {
+                    cerca(campo);
+                    campo.habilitado = false;
+                    //break;
+                }
+                else if (campo.rodeada == 0 && campo.habilitado) {
+                    campo.habilitado = false;
+                    actualiza(campo);
                 }
             }
         }
@@ -117,26 +145,28 @@ namespace Botones {
         public void descubre(object sender, MouseEventArgs e) {
             ComponentResourceManager imgs = new ComponentResourceManager(typeof(recursos));
             if (e.Button==MouseButtons.Left) {
-                if (this.rodeada == 0) {
-                    this.Enabled = false;
-                    foreach (Celda campo in this.vecinos)
+                if ((sender as Celda).rodeada == 0) {
+                    (sender as Celda).habilitado = false;
+                    foreach (Celda campo in (sender as Celda).vecinos)
                         actualiza(campo);
                 }
-                else if (!this.estado)
-                    cerca(this);
-                else if (this.estado) {
+                else if (!(sender as Celda).estado)
+                    cerca((sender as Celda));
+                else if ((sender as Celda).estado) {
                     Juego.jugando = false;
-                    this.Image = new Bitmap(imgs.GetObject("mina") as Bitmap,this.lado-4, this.lado - 4);
+                    (sender as Celda).Image = new Bitmap(imgs.GetObject("mina") as Bitmap,(sender as Celda).lado-4, (sender as Celda).lado - 4);
                     MessageBox.Show("Kaboom");
                 }
             }
-            else {
-                MessageBox.Show("MSG Der");
-                this.Image = new Bitmap(imgs.GetObject("descarte") as Bitmap, this.lado - 4, this.lado - 4);
+            else if(e.Button==MouseButtons.Right) {
+                (sender as Celda).Image = new Bitmap(imgs.GetObject("descarte") as Bitmap, (sender as Celda).lado - 4, (sender as Celda).lado - 4);
             }
         }
+        /// <summary>
+        /// Colorea la celda de un color acorde a la cantidad de minas alrededor
+        /// </summary>
+        /// <param name="cerca">Celda central a la que se evaluarán sus vecinos</param>
         private void cerca(Celda cerca) {
-            
             switch (cerca.rodeada) {
                 case 1:
                     cerca.BackColor = Color.Blue;
